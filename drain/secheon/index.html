@@ -59,7 +59,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ft{font-size:13px;font-weight:700;color:var(--pr);margin-bottom:5px;}
 .fd{font-size:13px;color:#566573;line-height:1.6;}
 .gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:36px;}
-.gi img{width:100%;height:220px;object-fit:cover;border-radius:var(--rd);display:block;}
+.gi img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--rd);display:block;}
 .ict{background:var(--pr);border-radius:var(--rd);padding:24px;text-align:center;margin-bottom:36px;}
 .ict p{color:rgba(255,255,255,.9);font-size:14px;margin-bottom:14px;}
 .ict a{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--ac);color:#fff;padding:13px 36px;border-radius:50px;font-size:17px;font-weight:800;}
@@ -67,7 +67,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ec{background:#fff;border-radius:var(--rd);overflow:hidden;border:1px solid var(--lbg);}
 .eq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
 .eq-card{background:#fff;border:1px solid #c7d7f4;border-radius:var(--rd);overflow:hidden;text-align:center;}
-.eq-card img{width:100%;height:140px;object-fit:cover;display:block;}
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
 .eq-name{font-size:13px;font-weight:700;color:var(--pr);padding:10px 10px 4px;}
 .eq-desc{font-size:12px;color:#555;line-height:1.6;padding:0 10px 12px;}
 .en{font-size:14px;font-weight:700;color:var(--pr);padding:12px 14px 4px;}
@@ -124,6 +124,31 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 .diag-item{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;margin-bottom:8px;font-size:13px;color:#374151;display:flex;gap:10px;align-items:flex-start;}
 .diag-icon{font-size:18px;flex-shrink:0;}
 
+
+/* ── 장비 카드: 이미지 잘림 방지 ── */
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
+
+/* ── 비용 안내 ── */
+.cost-wrap{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);overflow:hidden;margin-bottom:12px;}
+.cr{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--lbg);}
+.cr:last-child{border-bottom:none;}
+.cl{font-size:13px;color:#566573;font-weight:600;}
+.cp{font-size:14px;font-weight:800;color:var(--pr);}
+.cn{font-size:12px;color:#888;line-height:1.8;margin-bottom:28px;padding:8px 4px;}
+
+/* ── 작업 소요 시간 ── */
+.time-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:28px;}
+.tr2{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);padding:14px 16px;display:flex;flex-direction:column;gap:4px;}
+.tl{font-size:12px;color:#888;font-weight:600;}
+.tv{font-size:15px;font-weight:800;color:var(--pr);}
+
+/* ── 하지 마세요 ── */
+.mistake-box{background:#fff;border:1px solid #fecaca;border-radius:var(--rd);padding:6px 4px;margin-bottom:28px;}
+.mi{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-bottom:1px solid #fee2e2;}
+.mi:last-child{border-bottom:none;}
+.mx{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#ef4444;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.mt{font-size:13px;color:#374151;line-height:1.7;}
+.mt strong{color:#b91c1c;}
 </style>
 </head>
 <body>
@@ -181,7 +206,7 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 <div class="case-wrap"><div class="case-card"><span class="case-type">피씨방</span><p class="case-body">세천동 PC방에서 화장실 배수구 역류 신고가 왔습니다. 야간 영업 후 이물질 누적이 원인이었으며 영업 시작 전 빠르게 처리했습니다.</p></div><div class="case-card"><span class="case-type">다세대주택</span><p class="case-body">세천동 다세대주택 전체 배관이 느려졌습니다. 세입자가 많아 이물질 투입이 복합되어 공용 배관이 70% 협착된 상태였으며 전체 세척으로 당일 복원했습니다.</p></div><div class="case-card"><span class="case-type">아파트</span><p class="case-body">세천동 아파트에서 입주 15년 차 공동 배관 스케일 누적으로 1층 세대 역류가 발생했습니다. 내시경으로 막힘 위치를 파악하고 고압세척으로 당일 해결했습니다.</p></div><div class="case-card"><span class="case-type">단독주택</span><p class="case-body">세천동 단독주택에서 주방과 욕실 배수가 동시에 느려졌습니다. 공동 배관 내 30년치 스케일 누적이 원인으로 단계적 고압세척으로 복원했습니다.</p></div></div>
 <h2 class="st">🌡️ 세천동 계절별 하수구막힘 특성</h2>
 <div class="season-grid"><div class="season-card"><div class="season-icon">🌸</div><div class="season-title">봄</div><div class="season-desc">세천동은 겨울 동파 후 균열이 생긴 배관을 봄에 발견하는 경우가 많습니다. 이음매 점검을 권장합니다.</div></div><div class="season-card"><div class="season-icon">☀️</div><div class="season-title">여름</div><div class="season-desc">세천동은 여름철 음식물 부패가 빠르고 기름 슬러지 누적 속도가 가장 빠른 계절입니다. 1~2개월마다 점검하세요.</div></div><div class="season-card"><div class="season-icon">🍁</div><div class="season-title">가을</div><div class="season-desc">세천동은 가을에 낙엽·이물질이 외부 배수구로 유입되기 쉽습니다. 외부 배수구 덮개 상태를 확인하세요.</div></div><div class="season-card"><div class="season-icon">❄️</div><div class="season-title">겨울</div><div class="season-desc">세천동은 겨울철 기름이 굳는 속도가 빠르고 배관 동파 위험이 높습니다. 외부 배관 보온이 필수입니다.</div></div></div>
-<h2 class="st">✅ 세천동 하수구막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>주방 배수구에서 물이 올라온다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>설거지 물이 싱크대에 고인다 → 슬러지 누적</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>배수구 주변 바닥이 젖어 있다 → 역류 시작</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>기름기 있는 음식 후 특히 느리다 → 기름 고착</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>건물 전체 배수가 느려졌다 → 횡주관 문제</span></li></ul><h2 class="st">💡 세천동 하수구막힘 예방 팁</h2><div class="prev-wrap"><div class="prev-card"><div class="prev-icon">🧴</div><div class="prev-title">그리스트랩 설치 권장</div><div class="prev-desc">음식점은 그리스트랩 설치로 기름 슬러지를 차단하세요.</div></div><div class="prev-card"><div class="prev-icon">📋</div><div class="prev-title">공용 배관 관리 규칙</div><div class="prev-desc">공동 배관은 거름망 사용을 전 세대가 지키는 게 핵심이에요.</div></div><div class="prev-card"><div class="prev-icon">🔧</div><div class="prev-title">정기 세척 계약</div><div class="prev-desc">분기·반기 정기 세척 계약으로 예방 관리를 추천합니다.</div></div><div class="prev-card"><div class="prev-icon">📞</div><div class="prev-title">이상 시 즉시 연락</div><div class="prev-desc">배수가 평소보다 느려지면 즉시 연락하세요.</div></div></div><h2 class="st">📋 세천동 실제 작업 사례</h2><div class="env-box work-story-box"><h3>🔧 세천동 하수구 처리 사례</h3><p>세천동의 오래된 단독주택에서 30년된 주철 배관 스케일 누적으로 완전 폐색된 사례를 처리했습니다. 내시경으로 배관 직경의 80%가 스케일로 채워진 것을 확인하고 단계적으로 수압을 높여 3회에 걸쳐 완전 제거했습니다. 무리한 고압세척은 노후 배관을 파손시킬 수 있어 안전 수압 범위 내에서 처리하는 것이 핵심입니다.</p></div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/drain/jangdae_dj/">장대동 하수구막힘</a><a href="/drain/byeondong_dj/">변동 하수구막힘</a><a href="/drain/sanseong_dj/">산성동 하수구막힘</a><a href="/drain/doma/">도마동 하수구막힘</a><a href="/drain/dungok/">둔곡동 하수구막힘</a><a href="/drain/ansan_dj/">안산동 하수구막힘</a></div>
+<h2 class="st">✅ 세천동 하수구막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>주방 배수구에서 물이 올라온다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>설거지 물이 싱크대에 고인다 → 슬러지 누적</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>배수구 주변 바닥이 젖어 있다 → 역류 시작</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>기름기 있는 음식 후 특히 느리다 → 기름 고착</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>건물 전체 배수가 느려졌다 → 횡주관 문제</span></li></ul><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/drain/jangdae_dj/">장대동 하수구막힘</a><a href="/drain/byeondong_dj/">변동 하수구막힘</a><a href="/drain/sanseong_dj/">산성동 하수구막힘</a><a href="/drain/doma/">도마동 하수구막힘</a><a href="/drain/dungok/">둔곡동 하수구막힘</a><a href="/drain/ansan_dj/">안산동 하수구막힘</a></div>
 <footer>
   <div style="font-size:15px;font-weight:800;margin-bottom:3px;">🔧 하수구출동</div>
   <div style="font-size:17px;font-weight:800;color:var(--ac);margin-bottom:3px;">📞 070-8098-4119</div>

@@ -59,7 +59,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ft{font-size:13px;font-weight:700;color:var(--pr);margin-bottom:5px;}
 .fd{font-size:13px;color:#566573;line-height:1.6;}
 .gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:36px;}
-.gi img{width:100%;height:220px;object-fit:cover;border-radius:var(--rd);display:block;}
+.gi img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--rd);display:block;}
 .ict{background:var(--pr);border-radius:var(--rd);padding:24px;text-align:center;margin-bottom:36px;}
 .ict p{color:rgba(255,255,255,.9);font-size:14px;margin-bottom:14px;}
 .ict a{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--ac);color:#fff;padding:13px 36px;border-radius:50px;font-size:17px;font-weight:800;}
@@ -67,7 +67,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ec{background:#fff;border-radius:var(--rd);overflow:hidden;border:1px solid var(--lbg);}
 .eq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
 .eq-card{background:#fff;border:1px solid #c7d7f4;border-radius:var(--rd);overflow:hidden;text-align:center;}
-.eq-card img{width:100%;height:140px;object-fit:cover;display:block;}
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
 .eq-name{font-size:13px;font-weight:700;color:var(--pr);padding:10px 10px 4px;}
 .eq-desc{font-size:12px;color:#555;line-height:1.6;padding:0 10px 12px;}
 .en{font-size:14px;font-weight:700;color:var(--pr);padding:12px 14px 4px;}
@@ -124,6 +124,31 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 .diag-item{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;margin-bottom:8px;font-size:13px;color:#374151;display:flex;gap:10px;align-items:flex-start;}
 .diag-icon{font-size:18px;flex-shrink:0;}
 
+
+/* ── 장비 카드: 이미지 잘림 방지 ── */
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
+
+/* ── 비용 안내 ── */
+.cost-wrap{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);overflow:hidden;margin-bottom:12px;}
+.cr{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--lbg);}
+.cr:last-child{border-bottom:none;}
+.cl{font-size:13px;color:#566573;font-weight:600;}
+.cp{font-size:14px;font-weight:800;color:var(--pr);}
+.cn{font-size:12px;color:#888;line-height:1.8;margin-bottom:28px;padding:8px 4px;}
+
+/* ── 작업 소요 시간 ── */
+.time-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:28px;}
+.tr2{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);padding:14px 16px;display:flex;flex-direction:column;gap:4px;}
+.tl{font-size:12px;color:#888;font-weight:600;}
+.tv{font-size:15px;font-weight:800;color:var(--pr);}
+
+/* ── 하지 마세요 ── */
+.mistake-box{background:#fff;border:1px solid #fecaca;border-radius:var(--rd);padding:6px 4px;margin-bottom:28px;}
+.mi{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-bottom:1px solid #fee2e2;}
+.mi:last-child{border-bottom:none;}
+.mx{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#ef4444;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.mt{font-size:13px;color:#374151;line-height:1.7;}
+.mt strong{color:#b91c1c;}
 </style>
 </head>
 <body>
@@ -181,7 +206,7 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 <div class="case-wrap"><div class="case-card"><span class="case-type">카페</span><p class="case-body">외삼동 카페 카운터 하부에서 누수가 발견됐습니다. 음료 배관 연결부 이완이 원인이었으며 재연결로 해결했습니다.</p></div><div class="case-card"><span class="case-type">아파트</span><p class="case-body">외삼동 아파트에서 아랫집 천장 누수로 층간 분쟁이 발생했습니다. 열화상 카메라로 누수 경로를 정확히 파악해 책임 세대를 특정하고 최소 범위 수리로 해결했습니다.</p></div><div class="case-card"><span class="case-type">다세대주택</span><p class="case-body">외삼동 다세대주택 공용 배관에서 누수가 발생해 여러 세대에 피해가 생겼습니다. 누수 탐지 후 공용 배관 연결부를 수리했습니다.</p></div><div class="case-card"><span class="case-type">단독주택</span><p class="case-body">외삼동 단독주택 지하실 바닥에서 물이 올라왔습니다. 지하 배관 부식 균열이 원인으로 내시경 진단 후 파열 구간을 수리했습니다.</p></div></div>
 <h2 class="st">🌡️ 외삼동 계절별 누수탐지 특성</h2>
 <div class="season-grid"><div class="season-card"><div class="season-icon">🌸</div><div class="season-title">봄</div><div class="season-desc">외삼동은 봄 해빙기 동파 파열 누수가 뒤늦게 발견되는 경우가 많습니다. 봄에 꼭 점검하세요.</div></div><div class="season-card"><div class="season-icon">☀️</div><div class="season-title">여름</div><div class="season-desc">외삼동은 여름 장마철 외벽·지하 방수 불량으로 인한 누수 신고가 증가합니다.</div></div><div class="season-card"><div class="season-icon">🍁</div><div class="season-title">가을</div><div class="season-desc">외삼동은 가을에 겨울 대비 배관 보온 점검을 받으면 동파 누수를 예방할 수 있습니다.</div></div><div class="season-card"><div class="season-icon">❄️</div><div class="season-title">겨울</div><div class="season-desc">외삼동은 겨울철 동파 누수 위험이 가장 높습니다. 외부 노출 배관 보온이 필수입니다.</div></div></div>
-<h2 class="st">✅ 외삼동 누수탐지 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>배수가 완전히 막혀 물이 고인다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>전보다 배수 속도가 절반으로 줄었다 → 슬러지 누적</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>밤사이 배수구에 물이 고여 있다 → 역류 징후</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>주말·공휴일 집에 오래 있을 때 더 막힌다 → 사용량 과부하</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>특정 층만 역류한다 → 스택 배관 부분 막힘</span></li></ul><h2 class="st">💡 외삼동 누수탐지 예방 팁</h2><div class="prev-wrap"><div class="prev-card"><div class="prev-icon">🌿</div><div class="prev-title">나무 뿌리 주의</div><div class="prev-desc">배관 주변 나무는 5년마다 뿌리 침투 여부를 확인하세요.</div></div><div class="prev-card"><div class="prev-icon">❄️</div><div class="prev-title">동파 예방</div><div class="prev-desc">외부 배관 보온재 설치로 겨울 동파를 막으세요.</div></div><div class="prev-card"><div class="prev-icon">🔍</div><div class="prev-title">역류 징후 즉시 대응</div><div class="prev-desc">물을 많이 쓸 때 느려진다면 즉시 연락하세요.</div></div><div class="prev-card"><div class="prev-icon">🏠</div><div class="prev-title">입주 전 배관 점검</div><div class="prev-desc">새 거처로 이사 전 배관 상태를 점검하세요.</div></div></div><h2 class="st">📋 외삼동 실제 작업 사례</h2><div class="env-box work-story-box"><h3>🔧 외삼동 누수 처리 사례</h3><p>외삼동의 연구소 건물에서 특수 실험 용매가 배관에 유입된 사례를 처리했습니다. 용매 성분을 먼저 파악하고 중화 처리 후 고압세척으로 완전 제거했습니다. 연구소 배관은 일반 처리와 다른 전문 접근이 필요합니다.</p></div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/leak/sannae/">산내동 누수탐지</a><a href="/leak/seonhwa/">선화동 누수탐지</a><a href="/leak/dungok/">둔곡동 누수탐지</a><a href="/leak/tapnip/">탑립동 누수탐지</a><a href="/leak/yeongi_myeon/">연기면 누수탐지</a><a href="/leak/deongmyeong/">덕명동 누수탐지</a></div>
+<h2 class="st">✅ 외삼동 누수탐지 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>배수가 완전히 막혀 물이 고인다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>전보다 배수 속도가 절반으로 줄었다 → 슬러지 누적</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>밤사이 배수구에 물이 고여 있다 → 역류 징후</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>주말·공휴일 집에 오래 있을 때 더 막힌다 → 사용량 과부하</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>특정 층만 역류한다 → 스택 배관 부분 막힘</span></li></ul><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/leak/sannae/">산내동 누수탐지</a><a href="/leak/seonhwa/">선화동 누수탐지</a><a href="/leak/dungok/">둔곡동 누수탐지</a><a href="/leak/tapnip/">탑립동 누수탐지</a><a href="/leak/yeongi_myeon/">연기면 누수탐지</a><a href="/leak/deongmyeong/">덕명동 누수탐지</a></div>
 <footer>
   <div style="font-size:15px;font-weight:800;margin-bottom:3px;">🔧 하수구출동</div>
   <div style="font-size:17px;font-weight:800;color:var(--ac);margin-bottom:3px;">📞 070-8098-4119</div>

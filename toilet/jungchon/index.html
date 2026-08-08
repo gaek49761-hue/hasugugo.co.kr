@@ -59,7 +59,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ft{font-size:13px;font-weight:700;color:var(--pr);margin-bottom:5px;}
 .fd{font-size:13px;color:#566573;line-height:1.6;}
 .gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:36px;}
-.gi img{width:100%;height:220px;object-fit:cover;border-radius:var(--rd);display:block;}
+.gi img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--rd);display:block;}
 .ict{background:var(--pr);border-radius:var(--rd);padding:24px;text-align:center;margin-bottom:36px;}
 .ict p{color:rgba(255,255,255,.9);font-size:14px;margin-bottom:14px;}
 .ict a{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--ac);color:#fff;padding:13px 36px;border-radius:50px;font-size:17px;font-weight:800;}
@@ -67,7 +67,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ec{background:#fff;border-radius:var(--rd);overflow:hidden;border:1px solid var(--lbg);}
 .eq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
 .eq-card{background:#fff;border:1px solid #c7d7f4;border-radius:var(--rd);overflow:hidden;text-align:center;}
-.eq-card img{width:100%;height:140px;object-fit:cover;display:block;}
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
 .eq-name{font-size:13px;font-weight:700;color:var(--pr);padding:10px 10px 4px;}
 .eq-desc{font-size:12px;color:#555;line-height:1.6;padding:0 10px 12px;}
 .en{font-size:14px;font-weight:700;color:var(--pr);padding:12px 14px 4px;}
@@ -124,6 +124,31 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 .diag-item{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;margin-bottom:8px;font-size:13px;color:#374151;display:flex;gap:10px;align-items:flex-start;}
 .diag-icon{font-size:18px;flex-shrink:0;}
 
+
+/* ── 장비 카드: 이미지 잘림 방지 ── */
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
+
+/* ── 비용 안내 ── */
+.cost-wrap{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);overflow:hidden;margin-bottom:12px;}
+.cr{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--lbg);}
+.cr:last-child{border-bottom:none;}
+.cl{font-size:13px;color:#566573;font-weight:600;}
+.cp{font-size:14px;font-weight:800;color:var(--pr);}
+.cn{font-size:12px;color:#888;line-height:1.8;margin-bottom:28px;padding:8px 4px;}
+
+/* ── 작업 소요 시간 ── */
+.time-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:28px;}
+.tr2{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);padding:14px 16px;display:flex;flex-direction:column;gap:4px;}
+.tl{font-size:12px;color:#888;font-weight:600;}
+.tv{font-size:15px;font-weight:800;color:var(--pr);}
+
+/* ── 하지 마세요 ── */
+.mistake-box{background:#fff;border:1px solid #fecaca;border-radius:var(--rd);padding:6px 4px;margin-bottom:28px;}
+.mi{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-bottom:1px solid #fee2e2;}
+.mi:last-child{border-bottom:none;}
+.mx{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#ef4444;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.mt{font-size:13px;color:#374151;line-height:1.7;}
+.mt strong{color:#b91c1c;}
 </style>
 </head>
 <body>
@@ -157,9 +182,7 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 <details class="fi2"><summary class="fq">변기막힘 주요 원인이 뭔가요?</summary><div class="fa">물티슈·이물질 투입, 과도한 휴지 사용이 변기막힘 주원인입니다.</div></details>
 <details class="fi2"><summary class="fq">변기에 이물질을 빠뜨렸어요.</summary><div class="fa">변기이물질, 변기에이물질빠뜨렸을때는 내시경으로 위치 확인 후 제거합니다.</div></details>
 <details class="fi2"><summary class="fq">변기막힘 뚫어주는곳 어디서 찾나요?</summary><div class="fa">저희가 대전·세종 변기막힘 전문 뚫어주는곳입니다. 화장실막힘도 처리 가능합니다.</div></details></div>
-<div class="sl">CASES</div><h2 class="st">중촌동 실제 작업 사례</h2><div class="about-box"><p class="ab-body" style="white-space:pre-line">중촌동 어린이 장난감 변기 투입. 내시경으로 위치를 확인하고 변기 탈거 없이 30분 만에 꺼냈어요.</p></div>
-
-<div class="sl">GALLERY</div><h2 class="st">📸 중촌동 변기막힘 실제 작업 사진</h2><div class="gl"><div class="gi"><img src="/images/toilet/hasugu-toilet-01.jpg" alt="중촌동 변기막힘 실제 작업 사진 1 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-13.jpg" alt="중촌동 변기막힘 실제 작업 사진 2 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-03.jpg" alt="중촌동 변기막힘 실제 작업 사진 3 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-12.jpg" alt="중촌동 변기막힘 실제 작업 사진 4 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-08.jpg" alt="중촌동 변기막힘 실제 작업 사진 5 | 하수구출동" loading="lazy" width="400" height="300"></div></div>
+<div class="sl">CASES</div><div class="sl">GALLERY</div><h2 class="st">📸 중촌동 변기막힘 실제 작업 사진</h2><div class="gl"><div class="gi"><img src="/images/toilet/hasugu-toilet-01.jpg" alt="중촌동 변기막힘 실제 작업 사진 1 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-13.jpg" alt="중촌동 변기막힘 실제 작업 사진 2 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-03.jpg" alt="중촌동 변기막힘 실제 작업 사진 3 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-12.jpg" alt="중촌동 변기막힘 실제 작업 사진 4 | 하수구출동" loading="lazy" width="400" height="300"></div><div class="gi"><img src="/images/toilet/hasugu-toilet-08.jpg" alt="중촌동 변기막힘 실제 작업 사진 5 | 하수구출동" loading="lazy" width="400" height="300"></div></div>
 <div class="sl">TIME</div><h2 class="st">작업 소요 시간</h2><div class="time-box"><div class="tr2"><span class="tl">단순 막힘</span><span class="tv">20~40분</span></div><div class="tr2"><span class="tl">이물질 내시경 제거</span><span class="tv">30분~1시간</span></div><div class="tr2"><span class="tl">내시경 포함</span><span class="tv">1시간</span></div></div>
 <div class="sl">CAUTION</div><h2 class="st">이것만은 하지 마세요!</h2><div class="mistake-box"><div class="mi"><span class="mx">X</span><span class="mt"><strong>식당 기름 배수구 직접 버리기</strong> - 구도심 배관에 슬러지 빠르게 쌓여요</span></div><div class="mi"><span class="mx">X</span><span class="mt"><strong>뚫어뻥 강하게 반복</strong> - 노후 연결부 충격으로 누수 위험</span></div><div class="mi"><span class="mx">X</span><span class="mt"><strong>세정제 반복 사용</strong> - 일시적으로만 뚫려요</span></div><div class="mi"><span class="mx">X</span><span class="mt"><strong>막힘 방치</strong> - 영업에 지장이 생길 수 있어요</span></div></div><div class="sl">PRICE</div><h2 class="st">중촌동 변기막힘 비용 안내</h2><div class="cost-wrap"><div class="cr"><span class="cl">출장비</span><span class="cp">무료 방문</span></div><div class="cr"><span class="cl">작업 비용</span><span class="cp">현장 확인 후 안내</span></div><div class="cr"><span class="cl">야간·공휴일</span><span class="cp">별도 할증 없음</span></div><div class="cr"><span class="cl">과견적</span><span class="cp">절대 없음</span></div></div><p class="cn">현장에서 상태를 직접 보고 정확하게 안내해요. 작업 전 반드시 비용 안내 후 동의를 받고 시작해요.</p>
 <div class="sl">EQUIPMENT</div><h2 class="st">🛠 작업 장비 소개</h2><div class="eq-grid"><div class="eq-card"><img src="/images/equipment/hasugu-equipment-01.jpg" alt="하수구출동 변기 전용 고압세척기" loading="lazy" width="300" height="200"/><div class="eq-name">변기 전용 고압세척기</div><div class="eq-desc">변기 배관 깊숙이 고압수를 주입해 단단한 이물질·결석을 분해·제거합니다</div></div><div class="eq-card"><img src="/images/equipment/hasugu-equipment-05.jpg" alt="하수구출동 배관 음파 탐지기" loading="lazy" width="300" height="200"/><div class="eq-name">배관 음파 탐지기</div><div class="eq-desc">변기에서 이어지는 매립 배관의 파손·균열 위치를 음파로 탐지합니다</div></div><div class="eq-card"><img src="/images/equipment/hasugu-equipment-02.jpg" alt="하수구출동 변기 전용 내시경" loading="lazy" width="300" height="200"/><div class="eq-name">변기 전용 내시경</div><div class="eq-desc">변기 트랩 내부를 직접 촬영해 이물질 위치와 상태를 정밀하게 파악합니다</div></div></div>
@@ -179,7 +202,7 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 <div class="case-wrap"><div class="case-card"><span class="case-type">다세대주택</span><p class="case-body">중촌동 다세대주택 공용 화장실 변기가 역류했습니다. 경질 이물질이 오수관 굴곡부에 걸린 상태로 특수 장비로 제거했습니다.</p></div><div class="case-card"><span class="case-type">피씨방</span><p class="case-body">중촌동 PC방 화장실에서 변기 3개가 동시에 막혔습니다. 야간 이용객 과다로 이물질이 공용관에 집중된 상태였으며 전체 청소 후 정상화했습니다.</p></div><div class="case-card"><span class="case-type">단독주택</span><p class="case-body">중촌동 단독주택 변기에서 오물이 역류했습니다. 정화조 연결 오수관 막힘이 원인으로 정화조 업체와 협업해 당일 해결했습니다.</p></div><div class="case-card"><span class="case-type">공장</span><p class="case-body">중촌동 공장 화장실 변기가 역류했습니다. 작업복 섬유 조각이 오수관에 걸린 특수 케이스로 회수 장비로 제거했습니다.</p></div></div>
 <h2 class="st">🌡️ 중촌동 계절별 변기막힘 특성</h2>
 <div class="season-grid"><div class="season-card"><div class="season-icon">🌸</div><div class="season-title">봄</div><div class="season-desc">중촌동은 봄 이사 시즌에 이물질 투입으로 인한 변기 막힘 신고가 증가합니다. 입주 시 점검을 권장합니다.</div></div><div class="season-card"><div class="season-icon">☀️</div><div class="season-title">여름</div><div class="season-desc">중촌동은 여름철 습도로 인해 오수 냄새가 강해지고 역류 시 더 큰 피해로 이어집니다.</div></div><div class="season-card"><div class="season-icon">🍁</div><div class="season-title">가을</div><div class="season-desc">중촌동은 가을 이사 시즌에도 변기 막힘 신고가 집중됩니다. 퇴거 전 배관 상태를 점검하세요.</div></div><div class="season-card"><div class="season-icon">❄️</div><div class="season-title">겨울</div><div class="season-desc">중촌동은 겨울철 동파로 인한 오수관 파열로 변기 역류가 발생할 수 있습니다.</div></div></div>
-<h2 class="st">✅ 중촌동 변기막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>배수가 완전히 막혀 물이 넘친다 → 즉시 연락 필요</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>물이 빠지긴 하지만 현저히 느리다 → 빨리 점검</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>배수구에서 냄새가 올라온다 → 슬러지 초기 단계</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>물을 많이 쓰면 역류한다 → 부분 막힘 진행 중</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>1층만 역류하고 위층은 정상 → 횡주관 막힘</span></li></ul><h2 class="st">💡 중촌동 변기막힘 예방 팁</h2><div class="prev-wrap"><div class="prev-card"><div class="prev-icon">🍽️</div><div class="prev-title">식기 닦고 씻기</div><div class="prev-desc">기름기 있는 그릇은 키친타월로 닦은 뒤 씻으세요.</div></div><div class="prev-card"><div class="prev-icon">🚿</div><div class="prev-title">샤워 후 바로 거름망 청소</div><div class="prev-desc">샤워 후 머리카락을 즉시 제거하면 트랩 막힘을 예방해요.</div></div><div class="prev-card"><div class="prev-icon">🌿</div><div class="prev-title">외부 배관 보온</div><div class="prev-desc">겨울 전 외부 노출 배관에 보온재를 감으세요.</div></div><div class="prev-card"><div class="prev-icon">📞</div><div class="prev-title">배수 불량 초기 연락</div><div class="prev-desc">느려지기 시작할 때 연락하면 간단히 해결돼요.</div></div></div><h2 class="st">📋 중촌동 실제 작업 사례</h2><div class="env-box work-story-box"><h3>🔧 중촌동 변기 처리 사례</h3><p>중촌동의 카페에서 커피 오일과 우유 지방이 결합한 복합 슬러지 막힘을 처리했습니다. 일반 세척제로는 제거가 어려운 케이스로 전문 효소 세척제 투입 후 고압세척으로 완전 제거했습니다. 월 1회 예방 세척 계약으로 재발 없이 운영 중입니다.</p></div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/toilet/sanul/">산울동 변기막힘</a><a href="/toilet/daeheung/">대흥동 변기막힘</a><a href="/toilet/dorong/">도룡동 변기막힘</a><a href="/toilet/yongmun_dj/">용문동 변기막힘</a><a href="/toilet/samjeong_dj_dong/">삼정동 변기막힘</a><a href="/toilet/juchon/">주촌동 변기막힘</a></div>
+<h2 class="st">✅ 중촌동 변기막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>배수가 완전히 막혀 물이 넘친다 → 즉시 연락 필요</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>물이 빠지긴 하지만 현저히 느리다 → 빨리 점검</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>배수구에서 냄새가 올라온다 → 슬러지 초기 단계</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>물을 많이 쓰면 역류한다 → 부분 막힘 진행 중</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>1층만 역류하고 위층은 정상 → 횡주관 막힘</span></li></ul><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/toilet/sanul/">산울동 변기막힘</a><a href="/toilet/daeheung/">대흥동 변기막힘</a><a href="/toilet/dorong/">도룡동 변기막힘</a><a href="/toilet/yongmun_dj/">용문동 변기막힘</a><a href="/toilet/samjeong_dj_dong/">삼정동 변기막힘</a><a href="/toilet/juchon/">주촌동 변기막힘</a></div>
 <footer>
   <div style="font-size:15px;font-weight:800;margin-bottom:3px;">🔧 하수구출동</div>
   <div style="font-size:17px;font-weight:800;color:var(--ac);margin-bottom:3px;">📞 070-8098-4119</div>

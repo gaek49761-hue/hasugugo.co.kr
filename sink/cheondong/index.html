@@ -59,7 +59,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ft{font-size:13px;font-weight:700;color:var(--pr);margin-bottom:5px;}
 .fd{font-size:13px;color:#566573;line-height:1.6;}
 .gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:36px;}
-.gi img{width:100%;height:220px;object-fit:cover;border-radius:var(--rd);display:block;}
+.gi img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--rd);display:block;}
 .ict{background:var(--pr);border-radius:var(--rd);padding:24px;text-align:center;margin-bottom:36px;}
 .ict p{color:rgba(255,255,255,.9);font-size:14px;margin-bottom:14px;}
 .ict a{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--ac);color:#fff;padding:13px 36px;border-radius:50px;font-size:17px;font-weight:800;}
@@ -67,7 +67,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ec{background:#fff;border-radius:var(--rd);overflow:hidden;border:1px solid var(--lbg);}
 .eq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
 .eq-card{background:#fff;border:1px solid #c7d7f4;border-radius:var(--rd);overflow:hidden;text-align:center;}
-.eq-card img{width:100%;height:140px;object-fit:cover;display:block;}
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
 .eq-name{font-size:13px;font-weight:700;color:var(--pr);padding:10px 10px 4px;}
 .eq-desc{font-size:12px;color:#555;line-height:1.6;padding:0 10px 12px;}
 .en{font-size:14px;font-weight:700;color:var(--pr);padding:12px 14px 4px;}
@@ -124,6 +124,31 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 .diag-item{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;margin-bottom:8px;font-size:13px;color:#374151;display:flex;gap:10px;align-items:flex-start;}
 .diag-icon{font-size:18px;flex-shrink:0;}
 
+
+/* ── 장비 카드: 이미지 잘림 방지 ── */
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
+
+/* ── 비용 안내 ── */
+.cost-wrap{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);overflow:hidden;margin-bottom:12px;}
+.cr{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--lbg);}
+.cr:last-child{border-bottom:none;}
+.cl{font-size:13px;color:#566573;font-weight:600;}
+.cp{font-size:14px;font-weight:800;color:var(--pr);}
+.cn{font-size:12px;color:#888;line-height:1.8;margin-bottom:28px;padding:8px 4px;}
+
+/* ── 작업 소요 시간 ── */
+.time-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:28px;}
+.tr2{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);padding:14px 16px;display:flex;flex-direction:column;gap:4px;}
+.tl{font-size:12px;color:#888;font-weight:600;}
+.tv{font-size:15px;font-weight:800;color:var(--pr);}
+
+/* ── 하지 마세요 ── */
+.mistake-box{background:#fff;border:1px solid #fecaca;border-radius:var(--rd);padding:6px 4px;margin-bottom:28px;}
+.mi{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-bottom:1px solid #fee2e2;}
+.mi:last-child{border-bottom:none;}
+.mx{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#ef4444;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.mt{font-size:13px;color:#374151;line-height:1.7;}
+.mt strong{color:#b91c1c;}
 </style>
 </head>
 <body>
@@ -181,7 +206,7 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 <div class="case-wrap"><div class="case-card"><span class="case-type">카페</span><p class="case-body">천동 카페 싱크대 배수가 느려졌습니다. 커피 오일과 우유 지방이 결합해 배관에 굳은 케이스로 전문 세척 처리했습니다.</p></div><div class="case-card"><span class="case-type">다세대주택</span><p class="case-body">천동 다세대주택 공용 싱크대 배관이 역류했습니다. 여러 세대 기름 슬러지가 공용관에 누적된 상태로 전체 세척 후 정상화했습니다.</p></div><div class="case-card"><span class="case-type">식당</span><p class="case-body">천동 식당 업소용 싱크대 배관이 완전 폐색됐습니다. 영업 종료 후 야간 출동으로 대용량 기름 슬러지를 고압세척으로 완전 제거했습니다.</p></div><div class="case-card"><span class="case-type">피씨방</span><p class="case-body">천동 PC방 탕비실 싱크대가 막혔습니다. 컵라면 용기 잔여물과 이물질이 원인이었으며 빠르게 처리했습니다.</p></div></div>
 <h2 class="st">🌡️ 천동 계절별 싱크대막힘 특성</h2>
 <div class="season-grid"><div class="season-card"><div class="season-icon">🌸</div><div class="season-title">봄</div><div class="season-desc">천동 주방 배관은 겨울에 굳었던 기름이 봄 기온 상승으로 녹으면서 흘러내려 막히는 경우가 있습니다.</div></div><div class="season-card"><div class="season-icon">☀️</div><div class="season-title">여름</div><div class="season-desc">천동은 여름철 음식 준비 빈도가 높아 기름 슬러지 누적이 빨라집니다. 거름망 청소를 더 자주 해주세요.</div></div><div class="season-card"><div class="season-icon">🍁</div><div class="season-title">가을</div><div class="season-desc">천동 주방 배관은 가을 명절 대량 조리 후 기름 슬러지가 급증하는 경향이 있습니다.</div></div><div class="season-card"><div class="season-icon">❄️</div><div class="season-title">겨울</div><div class="season-desc">천동은 겨울철 기름이 배관에 더 빨리 굳습니다. 뜨거운 물 주 1회 흘려보내기를 권장합니다.</div></div></div>
-<h2 class="st">✅ 천동 싱크대막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>욕실 세면대 물이 역류한다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>배수가 5분 이상 걸린다 → 심각한 막힘</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>샤워 중 발목까지 물이 찬다 → 배수 불량</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>여러 곳이 동시에 느려졌다 → 공용 배관 막힘</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>역류 시 냄새가 심하다 → 오수관 연결 막힘</span></li></ul><h2 class="st">💡 천동 싱크대막힘 예방 팁</h2><div class="prev-wrap"><div class="prev-card"><div class="prev-icon">⏰</div><div class="prev-title">배수 속도 주 1회 확인</div><div class="prev-desc">느려지기 시작할 때 연락하면 비용이 훨씬 줄어요.</div></div><div class="prev-card"><div class="prev-icon">🧴</div><div class="prev-title">세제 과다 사용 금지</div><div class="prev-desc">세제가 배관에 굳으면 제거가 어려워요.</div></div><div class="prev-card"><div class="prev-icon">🌡️</div><div class="prev-title">찬물·뜨거운 물 병행</div><div class="prev-desc">설거지 시 찬물과 뜨거운 물을 번갈아 쓰면 기름이 굳지 않아요.</div></div><div class="prev-card"><div class="prev-icon">📅</div><div class="prev-title">분기 1회 전문 세척</div><div class="prev-desc">3개월마다 전문 세척으로 슬러지 누적을 예방하세요.</div></div></div><h2 class="st">📋 천동 실제 작업 사례</h2><div class="env-box work-story-box"><h3>🔧 천동 싱크대 처리 사례</h3><p>천동 단독주택에서 나무 뿌리가 배관 이음매로 침투해 완전 폐색된 사례를 처리했습니다. 내시경으로 뿌리 위치를 파악하고 기계적 제거 후 이음매 라이닝 처리로 재침투를 방지했습니다. 뿌리 제거 후 배수 속도가 5배 이상 개선됐습니다.</p></div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/sink/dodam/">도담동 싱크대막힘</a><a href="/sink/jungdong_dj/">중동 싱크대막힘</a><a href="/sink/jeongnim/">정림동 싱크대막힘</a><a href="/sink/hansol/">한솔동 싱크대막힘</a><a href="/sink/songchon/">송촌동 싱크대막힘</a><a href="/sink/yongmun_dj/">용문동 싱크대막힘</a></div>
+<h2 class="st">✅ 천동 싱크대막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>욕실 세면대 물이 역류한다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>배수가 5분 이상 걸린다 → 심각한 막힘</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>샤워 중 발목까지 물이 찬다 → 배수 불량</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>여러 곳이 동시에 느려졌다 → 공용 배관 막힘</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>역류 시 냄새가 심하다 → 오수관 연결 막힘</span></li></ul><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/sink/dodam/">도담동 싱크대막힘</a><a href="/sink/jungdong_dj/">중동 싱크대막힘</a><a href="/sink/jeongnim/">정림동 싱크대막힘</a><a href="/sink/hansol/">한솔동 싱크대막힘</a><a href="/sink/songchon/">송촌동 싱크대막힘</a><a href="/sink/yongmun_dj/">용문동 싱크대막힘</a></div>
 <footer>
   <div style="font-size:15px;font-weight:800;margin-bottom:3px;">🔧 하수구출동</div>
   <div style="font-size:17px;font-weight:800;color:var(--ac);margin-bottom:3px;">📞 070-8098-4119</div>

@@ -59,7 +59,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ft{font-size:13px;font-weight:700;color:var(--pr);margin-bottom:5px;}
 .fd{font-size:13px;color:#566573;line-height:1.6;}
 .gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:36px;}
-.gi img{width:100%;height:220px;object-fit:cover;border-radius:var(--rd);display:block;}
+.gi img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--rd);display:block;}
 .ict{background:var(--pr);border-radius:var(--rd);padding:24px;text-align:center;margin-bottom:36px;}
 .ict p{color:rgba(255,255,255,.9);font-size:14px;margin-bottom:14px;}
 .ict a{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--ac);color:#fff;padding:13px 36px;border-radius:50px;font-size:17px;font-weight:800;}
@@ -67,7 +67,7 @@ header{background:#fff;border-bottom:3px solid var(--pr);position:sticky;top:0;z
 .ec{background:#fff;border-radius:var(--rd);overflow:hidden;border:1px solid var(--lbg);}
 .eq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px;}
 .eq-card{background:#fff;border:1px solid #c7d7f4;border-radius:var(--rd);overflow:hidden;text-align:center;}
-.eq-card img{width:100%;height:140px;object-fit:cover;display:block;}
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
 .eq-name{font-size:13px;font-weight:700;color:var(--pr);padding:10px 10px 4px;}
 .eq-desc{font-size:12px;color:#555;line-height:1.6;padding:0 10px 12px;}
 .en{font-size:14px;font-weight:700;color:var(--pr);padding:12px 14px 4px;}
@@ -124,6 +124,31 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 .diag-item{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;margin-bottom:8px;font-size:13px;color:#374151;display:flex;gap:10px;align-items:flex-start;}
 .diag-icon{font-size:18px;flex-shrink:0;}
 
+
+/* ── 장비 카드: 이미지 잘림 방지 ── */
+.eq-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;}
+
+/* ── 비용 안내 ── */
+.cost-wrap{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);overflow:hidden;margin-bottom:12px;}
+.cr{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--lbg);}
+.cr:last-child{border-bottom:none;}
+.cl{font-size:13px;color:#566573;font-weight:600;}
+.cp{font-size:14px;font-weight:800;color:var(--pr);}
+.cn{font-size:12px;color:#888;line-height:1.8;margin-bottom:28px;padding:8px 4px;}
+
+/* ── 작업 소요 시간 ── */
+.time-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:28px;}
+.tr2{background:#fff;border:1px solid var(--lbg);border-radius:var(--rd);padding:14px 16px;display:flex;flex-direction:column;gap:4px;}
+.tl{font-size:12px;color:#888;font-weight:600;}
+.tv{font-size:15px;font-weight:800;color:var(--pr);}
+
+/* ── 하지 마세요 ── */
+.mistake-box{background:#fff;border:1px solid #fecaca;border-radius:var(--rd);padding:6px 4px;margin-bottom:28px;}
+.mi{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-bottom:1px solid #fee2e2;}
+.mi:last-child{border-bottom:none;}
+.mx{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:#ef4444;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.mt{font-size:13px;color:#374151;line-height:1.7;}
+.mt strong{color:#b91c1c;}
 </style>
 </head>
 <body>
@@ -181,7 +206,7 @@ footer{background:var(--pr);color:#fff;text-align:center;padding:28px 20px;font-
 <div class="case-wrap"><div class="case-card"><span class="case-type">아파트</span><p class="case-body">용문동 아파트에서 변기 물이 내려가지 않아 출동했습니다. 물티슈가 트랩에 걸려 막힌 케이스로 스프링 장비로 제거했습니다.</p></div><div class="case-card"><span class="case-type">공장</span><p class="case-body">용문동 공장 화장실 변기가 역류했습니다. 작업복 섬유 조각이 오수관에 걸린 특수 케이스로 회수 장비로 제거했습니다.</p></div><div class="case-card"><span class="case-type">피씨방</span><p class="case-body">용문동 PC방 화장실에서 변기 3개가 동시에 막혔습니다. 야간 이용객 과다로 이물질이 공용관에 집중된 상태였으며 전체 청소 후 정상화했습니다.</p></div><div class="case-card"><span class="case-type">카페</span><p class="case-body">용문동 카페 화장실 변기가 막혔습니다. 물티슈 투입으로 인한 막힘으로 제거 후 안내문 부착을 권장했습니다.</p></div></div>
 <h2 class="st">🌡️ 용문동 계절별 변기막힘 특성</h2>
 <div class="season-grid"><div class="season-card"><div class="season-icon">🌸</div><div class="season-title">봄</div><div class="season-desc">용문동은 봄 이사 시즌에 이물질 투입으로 인한 변기 막힘 신고가 증가합니다. 입주 시 점검을 권장합니다.</div></div><div class="season-card"><div class="season-icon">☀️</div><div class="season-title">여름</div><div class="season-desc">용문동은 여름철 습도로 인해 오수 냄새가 강해지고 역류 시 더 큰 피해로 이어집니다.</div></div><div class="season-card"><div class="season-icon">🍁</div><div class="season-title">가을</div><div class="season-desc">용문동은 가을 이사 시즌에도 변기 막힘 신고가 집중됩니다. 퇴거 전 배관 상태를 점검하세요.</div></div><div class="season-card"><div class="season-icon">❄️</div><div class="season-title">겨울</div><div class="season-desc">용문동은 겨울철 동파로 인한 오수관 파열로 변기 역류가 발생할 수 있습니다.</div></div></div>
-<h2 class="st">✅ 용문동 변기막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>주방 배수구에서 물이 올라온다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>설거지 물이 싱크대에 고인다 → 슬러지 누적</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>배수구 주변 바닥이 젖어 있다 → 역류 시작</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>기름기 있는 음식 후 특히 느리다 → 기름 고착</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>건물 전체 배수가 느려졌다 → 횡주관 문제</span></li></ul><h2 class="st">💡 용문동 변기막힘 예방 팁</h2><div class="prev-wrap"><div class="prev-card"><div class="prev-icon">🚫</div><div class="prev-title">기름 직접 버리기 금지</div><div class="prev-desc">주방 기름은 키친타월로 닦아 버리세요.</div></div><div class="prev-card"><div class="prev-icon">🧹</div><div class="prev-title">거름망 매일 청소</div><div class="prev-desc">배수구 거름망을 매일 비워주세요.</div></div><div class="prev-card"><div class="prev-icon">♨️</div><div class="prev-title">월 1회 뜨거운 물</div><div class="prev-desc">한 달에 한 번 끓인 물을 흘려보내세요.</div></div><div class="prev-card"><div class="prev-icon">🔍</div><div class="prev-title">반기 배관 점검</div><div class="prev-desc">6개월마다 배수 속도를 확인하세요.</div></div></div><h2 class="st">📋 용문동 실제 작업 사례</h2><div class="env-box work-story-box"><h3>🔧 용문동 변기 처리 사례</h3><p>용문동에서 입주 15년 차 아파트 단지 전체 배관 예방 세척을 진행했습니다. 4개 동 200세대 내시경 전수 점검에서 30곳의 막힘 위험 구간을 사전 발견하고 예방 처리했습니다. 이후 역류 신고가 90% 감소했으며 분기 정기 관리 계약을 체결했습니다.</p></div><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/toilet/dunsan/">둔산동 변기막힘</a><a href="/toilet/dajeong/">다정동 변기막힘</a><a href="/toilet/yeondong_myeon/">연동면 변기막힘</a><a href="/toilet/seonhwa/">선화동 변기막힘</a><a href="/toilet/oncheon/">온천동 변기막힘</a><a href="/toilet/bongsan_dj/">봉산동 변기막힘</a></div>
+<h2 class="st">✅ 용문동 변기막힘 증상 진단</h2><ul class="diag-list"><li class="diag-item"><span class="diag-icon">🚨</span><span>주방 배수구에서 물이 올라온다 → 즉시 연락</span></li><li class="diag-item"><span class="diag-icon">⚠️</span><span>설거지 물이 싱크대에 고인다 → 슬러지 누적</span></li><li class="diag-item"><span class="diag-icon">💧</span><span>배수구 주변 바닥이 젖어 있다 → 역류 시작</span></li><li class="diag-item"><span class="diag-icon">🔄</span><span>기름기 있는 음식 후 특히 느리다 → 기름 고착</span></li><li class="diag-item"><span class="diag-icon">🏠</span><span>건물 전체 배수가 느려졌다 → 횡주관 문제</span></li></ul><h2 class="st">인근 지역도 출장해요</h2><div class="nearby"><a href="/toilet/dunsan/">둔산동 변기막힘</a><a href="/toilet/dajeong/">다정동 변기막힘</a><a href="/toilet/yeondong_myeon/">연동면 변기막힘</a><a href="/toilet/seonhwa/">선화동 변기막힘</a><a href="/toilet/oncheon/">온천동 변기막힘</a><a href="/toilet/bongsan_dj/">봉산동 변기막힘</a></div>
 <footer>
   <div style="font-size:15px;font-weight:800;margin-bottom:3px;">🔧 하수구출동</div>
   <div style="font-size:17px;font-weight:800;color:var(--ac);margin-bottom:3px;">📞 070-8098-4119</div>
